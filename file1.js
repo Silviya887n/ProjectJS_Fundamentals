@@ -83,7 +83,7 @@ btnDetails5Days.textContent="Details5Days";
 btnDetails5Days.classList.add('classBtns');
 btnDetails5Days.id='btndetails';
 btnDetails5Days.addEventListener('click',()=>{
-   window.open(`./Pages/Forecat5DaysDetails.html?town=${encodeURIComponent(elementcity.value)}`);
+   window.open(`Forecat5DaysDetails.html?town=${encodeURIComponent(elementcity.value)}`);
 });
 
 ElContainerBtns.appendChild(btnDetails5Days);
@@ -201,7 +201,7 @@ for(const record of Object.values(data1)){
 
 
    elday1.addEventListener('click',()=>{
-      window.open(`./Pages/DetailsDay.html?town=${encodeURIComponent(elementcity.value)}&&datec=${requestd}`)
+      window.open(`DetailsDay.html?town=${encodeURIComponent(elementcity.value)}&&datec=${requestd}`)
    })
 
  
