@@ -162,7 +162,7 @@ countr++;
 
 elcurrentw.appendChild(eldiv1);
 
-/*5 Days Forecast  */
+/*5 Days Forecast  Test1*/
 const divfivedays=document.querySelector('.fivedays');
 const existh=document.querySelector('.fivedays h4');
 if(existh != null){
