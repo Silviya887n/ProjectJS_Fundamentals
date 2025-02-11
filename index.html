@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <script src="./file1.js"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image:url('./images/mapimgn.jpg') ;
+            background-repeat: repeat;           
+           
+        }
+
+        .page{
+            height: 400px;
+
+        }
+
+        main{
+            margin:0 auto ;
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            flex-direction: row;         
+        }
+
+        .head{
+            border-bottom: 1px solid #000;
+            background-color: rgb(80, 80, 173);
+            color:#fff;
+            text-align: center;
+            padding-top: 3px;
+            /* padding: 3px; */
+        }
+        .dsearch{
+            max-width:40%;
+            /* border: 1px solid #ccc; */
+            background: radial-gradient(circle, rgba(3, 3, 3, 0.15449929971988796) 24%, #f8f9fa 90%);
+            padding-top:100px;
+            min-height: 400px;
+            padding-left: 70px;          
+            margin: 20px;
+            padding: 20px;
+           
+        }
+        .content{
+            max-width:60%;
+            flex:0 0 50%;
+            /* margin: 20px; 
+            padding: 20px;*/
+           
+        }
+
+        #currentcast{
+            display: flex;
+            background-color: #e4e8f3a8;
+            /* #f8f9fa; */
+            flex-direction: row;
+            gap: 2em;
+            /* border: 1px solid #777676; */
+            border-radius: .25rem;
+            min-height: 200px;
+            min-width:auto;
+            padding: 15px;
+            /* opacity: 0.7; */
+        }
+
+        .classBtns{
+            width:200px;
+            background-color: cornflowerblue;
+            color: #fff;
+            padding:10px;
+            font-size:1em;
+            border-radius: 7px;
+            font-family: 'Helvetica', sans-serif;
+            cursor:pointer;
+        }
+        #city{
+            width:200px;
+            height: 40px;
+        }
+        .stylecondition{
+            display: flex;
+            flex-direction: row;
+        }
+        footer{
+            /* background-color: #f8f9fa; */
+            text-align: center;
+            padding: 2em 0 2em 0 ;           
+        }
+        #innerfooter{
+            margin: 0 auto 0 auto;
+            max-width:800px;
+        }
+        .cllihistory{
+            border: 1px solid rgba(0, 0, 0, .125);
+            padding: 1rem;
+        }
+
+        .allTown{
+            list-style-type: none;
+        }
+        li{
+            cursor:pointer;
+        }
+        li:hover{
+        background-color: lightslategray;
+         }
+
+         .class5Days{
+            display: flex;
+            gap:1em;
+            flex-direction: row;
+            margin-top:30px;
+         }
+         .classtyleday{
+            background-color:rgba(24, 98, 173, 0.685); 
+            color:#fff;
+            /* padding: 10px; */
+            width:50%;
+            text-align: center;
+            height: 250px;         
+            cursor:pointer;
+         }
+         .headertxtday{
+            position: absolute;
+            z-index: 1;
+            top:0px;
+            left:0px;
+            background-color: #176282f4;
+            width: auto;
+            padding: 5px;
+            position: relative;
+            /* opacity: 0.8; */
+         }
+         .contenttxtday{
+            /* position: absolute;
+            z-index: 1; */
+            background-color: #87CEEB;
+            width: 90%;
+            margin: 0 5px 0 5px;
+            border-radius: .25rem;
+            /* opacity: 0.5; */
+         }
+       
+         .ContainerBtns{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap:1em;
+         }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <header class="head"><h1>Weather Dashboard</h1></header>
+    <main>
+<div class="dsearch">
+    <label>Enter City</label>
+    <input id="city" type="text">
+     <button id="btnsearch" class="classBtns">Serch</button>     
+     <ul class="allTown">
+     </ul>
+
+     </ul>
+     
+ </div>
+ <div id="cont" class="content">
+    <h2>Information</h2>
+    <div id="currentcast">
+
+    </div>
+<div id="five" class="fivedays">
+
+</div>
+</div>
+   
+</main>
+<footer><p>Weather Dashboard created by Silviya Minova 2025</p></footer>
+</div>
+</body>
+</html>

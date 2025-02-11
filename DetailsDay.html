@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image:url('./images/mapimgn.jpg') ;
+            background-repeat: repeat;         
+           
+        }
+
+        .page{
+            height: 400px;
+           
+
+        }
+        .detaisday{
+            min-width: 200px;
+            max-width:1300px;
+            background: radial-gradient(circle, rgb(251 251 249 / 46%) 24%, #f8f9fa 90%);
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+            margin-top: 60px;
+            /* text-align: center; */
+        }
+        .styletblh{
+            background-color: rgb(185, 223, 210);
+           
+        }
+
+        .styletblh th{
+            border:1px solid #080808;
+            width:18%;                    
+
+        }
+
+
+        #tblhours{
+            margin-top: 27px;
+            background-color:rgb(185, 223, 210); 
+            max-width: 600px;
+            min-width: 400px;
+        }
+        #tblhours th{
+            border: 1px solid  rgba(232, 245, 240, 0.918); 
+            padding: 15px;
+            width: 50%;
+        }
+        #tblhours td{
+            border: 1px solid  rgba(232, 245, 240, 0.918); 
+            padding: 11px;
+            width: 50%;
+        }
+        .styleTblHours th{
+            width: 50%;
+        }
+
+        .styleTblHours div{
+            width:90px;
+        }
+
+        .classBtns{
+            width:100px;
+            background-color: cornflowerblue;
+            border: none;
+            color: #fff;
+            padding:3px;
+            font-size:1em;
+            border-radius: 7px;
+            font-family: 'Helvetica', sans-serif;
+            cursor:pointer;
+        }
+        .innerdetaisday{
+            text-align: center;
+        }
+
+        /* .classimg{
+            height: 40px; 
+        }*/
+        </style>
+        <script src="./Detailsweather.js"></script>
+        <script>
+            function goBack() {
+           window.history.go(-1);
+                 }
+        </script>
+</head>
+<body>
+<div id="page">   
+   <div class="detaisday">
+    <button id="BtnReturn" onclick="goBack();" class="classBtns">Return</button>
+    <div class="innerdetaisday"> <h2></h2>
+    <table id="headtable"></table>
+
+   <table id="tblhours" class="styleTblHours"></table>
+    </div>
+   </div>
+</div> 
+</body>
+</html>
