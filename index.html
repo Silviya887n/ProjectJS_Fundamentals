@@ -17,14 +17,14 @@
         }
 
         .page{
-            height: 400px;
-
+            height: 400px;           
         }
 
         main{
             margin:0 auto ;
             width:100%;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 2em;
@@ -60,6 +60,7 @@
 
         #currentcast{
             display: flex;
+            flex-wrap: wrap;
             background-color: #e4e8f3a8;
             /* #f8f9fa; */
             flex-direction: row;
@@ -85,9 +86,11 @@
         #city{
             width:200px;
             height: 40px;
+            margin-bottom: 10px;
         }
         .stylecondition{
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
         }
         footer{
@@ -95,9 +98,9 @@
             text-align: center;
             padding: 2em 0 2em 0 ;           
         }
-        #innerfooter{
+        .innerfooter{
             margin: 0 auto 0 auto;
-            max-width:800px;
+            width:60%;
         }
         .cllihistory{
             border: 1px solid rgba(0, 0, 0, .125);
@@ -156,6 +159,39 @@
             justify-content: space-around;
             gap:1em;
          }
+        /* @media screen and (max-width:600px){
+            .page{
+                width: 440px;
+            
+            }
+        }  */
+        @media  (max-width:600px){
+        main{
+            flex-direction: column;
+        }
+        }
+         @media (max-width:600px) {   
+            .dsearch{       
+            max-width:80%;
+            }
+            
+         }
+         @media (max-width:600px) {   
+            .content{       
+            max-width:80%;
+            }
+            
+         }
+         @media (max-width:600px){
+         .class5Days{
+            flex-direction: column;
+         }
+        }
+
+        
+
+        
+    
     </style>
 </head>
 <body>
@@ -183,7 +219,9 @@
 </div>
    
 </main>
-<footer><p>Weather Dashboard created by Silviya Minova 2025</p></footer>
+<footer><div class="innerfooter">
+    Weather Dashboard created by Silviya Minova 2025
+</div></footer>
 </div>
 </body>
 </html>
