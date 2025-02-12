@@ -196,6 +196,10 @@ eldivforecast.classList.add('class5Days');
 let countjson=0;
 divfivedays.innerHTML='';
 eldivforecast.innerHTML='';
+const ElMenu1=document.querySelector('.navmain_navbar');
+ElMenu1.style.visibility='visible';
+ElMenu1.innerHTML='';
+
 for(const record of Object.values(data1)){
    countjson++;
    if(countjson==3){
@@ -226,8 +230,7 @@ for(const record of Object.values(data1)){
    txtday.classList.add('headertxtday');
 
       /*Menu */  
-      const ElMenu1=document.querySelector('.navmain_navbar');
-      ElMenu1.style.visibility='visible';
+     
       const eldivl1= document.createElement('div');
       const eldiva1= document.createElement('a');
       eldiva1.textContent=txtday1;
