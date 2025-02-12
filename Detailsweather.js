@@ -7,12 +7,15 @@ window.onload= async function(){
     const receivedTown = urlParams.get('town');
     const date1= urlParams.get('datec');
     
-     const BtnRerutn= document.getElementById('BtnReturn');
-     BtnRerutn.addEventListener('click',()=>{
-       //  window.history.go(-1);
-        window.open(`index.html`);
+    //  const BtnRerutn= document.getElementById('BtnReturn');
+
+    //  BtnRerutn.onclick = () => window.history.back;
+     //BtnRerutn.addEventListener("click", window.history.back, false);
+    //  BtnRerutn.addEventListener('click',()=>{
+    //    //  window.history.go(-1);
+    //     window.open(`index.html`);
         
-     });
+    //  });
 
     const detailsday= document.querySelector('.detaisday h2'); 
 

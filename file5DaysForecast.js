@@ -4,10 +4,10 @@ window.onload= async function(){
     // // Retrieve the value of the 'value' parameter
     const receivedTown = urlParams.get('town');
 
-    const BtnReturn= document.getElementById('BtnReturn1');
-    BtnReturn.addEventListener('click',()=>{
-        window.open(`index.html`);
-    })
+    // const BtnReturn= document.getElementById('BtnReturn1');
+    // BtnReturn.addEventListener('click',()=>{
+    //     window.open(`index.html`);
+    // })
 
     const Tabledays=document.getElementById('Tbl5Days');
 

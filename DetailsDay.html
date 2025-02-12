@@ -95,14 +95,16 @@
         <script src="./Detailsweather.js"></script>
         <script>
             function goBack() {
-           window.history.go(-1);
+            history.go(-1);
+            console.log('Button clicked');
+   
                  }
         </script>
 </head>
 <body>
 <div id="page">   
    <div class="detaisday">
-    <button id="BtnReturn" onclick="goBack();" class="classBtns">Return</button>
+    <button id="BtnReturn" onclick="goBack();return false;" class="classBtns">Return</button>
     <div class="innerdetaisday"> <h2></h2>
     <table id="headtable"></table>
 
