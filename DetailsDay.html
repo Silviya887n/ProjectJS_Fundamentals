@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-
+  <link rel="stylesheet" href="./Styles/Main.css">
     <style>
         body{
             padding: 0;
@@ -87,6 +87,11 @@
         .innerdetaisday{
             text-align: center;
         }
+        .navmain_navbar{
+        padding:10px 50px 10px 50px;
+        justify-content:flex-start;
+        width: 70%;
+        }
 
         /* .classimg{
             height: 40px; 
@@ -103,7 +108,8 @@
 </head>
 <body>
 <div id="page">   
-   <div class="detaisday">
+    <div class="navmain_navbar"></div>
+    <div class="detaisday">
     <button id="BtnReturn" onclick="goBack();return false;" class="classBtns">Return</button>
     <div class="innerdetaisday"> <h2></h2>
     <table id="headtable"></table>

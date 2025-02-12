@@ -71,6 +71,24 @@ window.onload= async function(){
             const tddate= document.createElement('td');
             tddate.textContent=el3.date;
 
+            
+             /*Menu */
+             const  requestd= new Date(el3.date);
+             const  d= new Date(el3.date);
+
+             let day1=requestd.getDay();
+            //  let txtday=document.createElement('div');
+             const txtday1=DayWeek(day1);  
+             const ElMenu1=document.querySelector('.navmain_navbar');
+             ElMenu1.style.visibility='visible';
+             const eldivl1= document.createElement('div');
+             const eldiva1= document.createElement('a');
+             eldiva1.textContent=txtday1;
+             eldiva1.href=`DetailsDay.html?town=${encodeURIComponent(receivedTown)}&&datec=${el3.date}`;
+             eldivl1.appendChild(eldiva1);
+             ElMenu1.appendChild(eldivl1);
+
+
             const image1= document.createElement('img');
             const imgsrc=el3.day.condition.icon
             image1.src="https:"+imgsrc;
@@ -135,6 +153,35 @@ window.onload= async function(){
     }
 
 }
+
+function DayWeek(cday){
+    let txtday='';
+    switch(cday){
+       case 1:
+          txtday='Monday'; 
+       break;
+       case 2:
+          txtday='Tuesday'; 
+       break;
+       case 3:
+          txtday='Wednesday'; 
+       break;
+       case 4:
+          txtday='Thursday'; 
+       break;
+       case 5:
+          txtday='Friday'; 
+       break;
+       case 6:
+          txtday='Saturday'; 
+       break;
+       case 0:
+          txtday='Sunday'; 
+       break;
+   
+    }
+    return txtday;
+ }
 
 
 

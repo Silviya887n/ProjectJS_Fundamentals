@@ -5,6 +5,13 @@ function loadf(){
    
    const btnSearch=document.getElementById('btnsearch');
    btnSearch.addEventListener('click',LoadDataTown);
+   const ElMenu=document.querySelector('.navmain_navbar');
+   ElMenu.style.visibility='hidden';
+
+   const elhead=document.querySelector('.head');
+   elhead.addEventListener('click',()=>{
+      window.location.href=`index.html`;
+   })
   
 }
 
@@ -79,7 +86,7 @@ btnClear.addEventListener('click',()=>{
 ElContainerBtns.appendChild(btnClear);
 
 const btnDetails5Days= document.createElement('button');
-btnDetails5Days.textContent="Details5Days";
+btnDetails5Days.textContent="5-Day Forecast";
 btnDetails5Days.classList.add('classBtns');
 btnDetails5Days.id='btndetails';
 btnDetails5Days.addEventListener('click',()=>{
@@ -147,15 +154,18 @@ elcurrentw.appendChild(elcurrentcast);
 const elp1=document.createElement('p');
 elp1.textContent='Temperature: '+record.temp_c+" C°";
 const elp2=document.createElement('p');
-elp2.textContent='Wind Speed: '+record.wind_mph+'MPH';
-
+elp2.textContent='Humidity: '+record.humidity+'%';
 const elp3=document.createElement('p');
-elp3.textContent='UV index:'+record.uv;
+elp3.textContent='Wind Speed: '+record.wind_mph+'MPH';
+
+const elp4=document.createElement('p');
+elp4.textContent='UV index:'+record.uv;
 
 
 eldiv1.appendChild(elp1);
 eldiv1.appendChild(elp2);
 eldiv1.appendChild(elp3);
+eldiv1.appendChild(elp4);
    }
 
 countr++;
@@ -211,8 +221,22 @@ for(const record of Object.values(data1)){
    const  d= new Date(rec.date);
    let day1=d.getDay();
    let txtday=document.createElement('div');
-   txtday.textContent=DayWeek(day1);
+   const txtday1=DayWeek(day1);
+   txtday.textContent=txtday1;
    txtday.classList.add('headertxtday');
+
+      /*Menu */  
+      const ElMenu1=document.querySelector('.navmain_navbar');
+      ElMenu1.style.visibility='visible';
+      const eldivl1= document.createElement('div');
+      const eldiva1= document.createElement('a');
+      eldiva1.textContent=txtday1;
+      eldiva1.href=`DetailsDay.html?town=${encodeURIComponent(elementcity.value)}&&datec=${requestd}`;
+      eldivl1.appendChild(eldiva1);
+      ElMenu1.appendChild(eldivl1);
+
+
+
 
 const divimg=document.createElement('div');
 const image2= document.createElement('img');

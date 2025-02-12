@@ -7,6 +7,36 @@ window.onload= async function(){
     const receivedTown = urlParams.get('town');
     const date1= urlParams.get('datec');
     
+
+  /*Menu */
+  const  d= new Date(date1);
+  let day1=d.getDay();
+  let txtday=document.createElement('div');
+  const txtday1=DayWeek(day1);
+  txtday.textContent=txtday1;
+  txtday.classList.add('headertxtday');
+
+     /*Menu */  
+     const ElMenu1=document.querySelector('.navmain_navbar');
+     ElMenu1.style.visibility='visible';
+     const eldivl1= document.createElement('div');
+     const eldiva1= document.createElement('a');
+     eldiva1.textContent='5-Day Forecast';
+     eldiva1.href=`Forecat5DaysDetails.html?town=${encodeURIComponent(receivedTown)}`;
+     eldivl1.appendChild(eldiva1);
+     ElMenu1.appendChild(eldivl1);
+
+     const eldivl2= document.createElement('div');
+     const eldiva2= document.createElement('a');
+     eldiva2.textContent='Home';
+     eldiva2.addEventListener('click',()=>{
+            window.history.go(-1);
+           // window.open(`index.html`);
+            
+          });
+     eldivl2.appendChild(eldiva2);
+     ElMenu1.appendChild(eldivl2);
+
     //  const BtnRerutn= document.getElementById('BtnReturn');
 
     //  BtnRerutn.onclick = () => window.history.back;
@@ -243,3 +273,32 @@ const LoadDataTown = async() =>{
     console.log(Object.values(data));
 
 }
+
+function DayWeek(cday){
+    let txtday='';
+    switch(cday){
+       case 1:
+          txtday='Monday'; 
+       break;
+       case 2:
+          txtday='Tuesday'; 
+       break;
+       case 3:
+          txtday='Wednesday'; 
+       break;
+       case 4:
+          txtday='Thursday'; 
+       break;
+       case 5:
+          txtday='Friday'; 
+       break;
+       case 6:
+          txtday='Saturday'; 
+       break;
+       case 0:
+          txtday='Sunday'; 
+       break;
+   
+    }
+    return txtday;
+ }

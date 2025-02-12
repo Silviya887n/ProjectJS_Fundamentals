@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Project</title>
     <script src="./file1.js"></script>
+    <link rel="stylesheet" href="./Styles/Main.css">
     <style>
         body{
             padding: 0;
             margin: 0;
             font-size: 16px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #0a3242;
             background-image:url('./images/mapimgn.jpg') ;
             background-repeat: repeat;           
            
@@ -37,7 +39,7 @@
             color:#fff;
             text-align: center;
             padding-top: 3px;
-            /* padding: 3px; */
+            cursor: pointer;
         }
         .dsearch{
             max-width:40%;
@@ -188,15 +190,37 @@
          }
         }
 
-        
+        /* .navmain_navbar{           
+            background-color:  #ecececc9;        
+            max-width: 90%;
+            padding: 7px;
+            margin: 30px auto 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:row;
+            justify-content: space-around;
+            gap:2em;
+        }
 
-        
-    
+        .navmain_navbar a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .navmain_navbar div a:hover{
+            background-color: #848a99f6;
+            color:white;
+            background-color:#287da1f4;        
+            padding:7px 10px 7px 10px; 
+            opacity: 0.7;
+            text-decoration: none;
+        }
+       */
     </style>
 </head>
 <body>
     <div class="page">
     <header class="head"><h1>Weather Dashboard</h1></header>
+    <div class="navmain_navbar"></div>
     <main>
 <div class="dsearch">
     <label>Enter City</label>

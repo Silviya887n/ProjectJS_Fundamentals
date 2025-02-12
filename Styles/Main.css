@@ -1,0 +1,24 @@
+.navmain_navbar{           
+    background-color:  #ecececc9;        
+    max-width: 80%;
+    padding: 7px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-around;
+    gap:2em;
+}
+
+.navmain_navbar a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.navmain_navbar div a:hover{
+    background-color: #848a99f6;
+    color:white;
+    background-color:#287da1f4;        
+    padding:7px 10px 7px 10px; 
+    opacity: 0.7;
+    text-decoration: none;
+}
