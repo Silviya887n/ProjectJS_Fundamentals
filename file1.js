@@ -252,7 +252,8 @@ image2.alt="test";
 divimg.appendChild(image2);
 divimg.classList.add('contenttxtday');
 
-const elp52=document.createElement('p');
+const elp52=document.createElement('div');
+elp52.classList.add('styletemp');
 
 const elmaxspan=document.createElement('span');
 elmaxspan.textContent=rec.day.maxtemp_c+" C°";
