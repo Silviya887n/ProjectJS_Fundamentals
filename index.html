@@ -6,6 +6,7 @@
     <title>JS Project</title>
     <script src="./file1.js"></script>
     <link rel="stylesheet" href="./Styles/Main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         body{
             padding: 0;
@@ -85,11 +86,7 @@
             font-family: 'Helvetica', sans-serif;
             cursor:pointer;
         }
-        #city{
-            width:200px;
-            height: 40px;
-            margin-bottom: 10px;
-        }
+      
         .stylecondition{
             display: flex;
             flex-wrap: wrap;
@@ -111,12 +108,13 @@
 
         .allTown{
             list-style-type: none;
+            padding-left: 0;
         }
         li{
             cursor:pointer;
         }
         li:hover{
-        background-color: #287da1f4; 
+        background-color: #287da1bd; 
         color: white;   
          }
 
@@ -169,7 +167,7 @@
             }
         }  */
         @media  (max-width:600px){
-        main{
+            main{
             flex-direction: column;
         }
         }
@@ -186,41 +184,62 @@
             
          }
          @media (max-width:600px){
-         .class5Days{
+             .class5Days{
             flex-direction: column;
          }
         }
+ 
 
         .styletemp{
             display: flex;
             gap:2em;
             justify-content: center;
         }
-        /* .navmain_navbar{           
-            background-color:  #ecececc9;        
-            max-width: 90%;
-            padding: 7px;
-            margin: 30px auto 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction:row;
-            justify-content: space-around;
-            gap:2em;
+        #city{
+            width:170px;
+            border-top-left-radius: .25rem; 
+            border-bottom-left-radius:.25rem;  
+            /* height: 40px; */
         }
 
-        .navmain_navbar a{
-            text-decoration: none;
+        .input_group {
+            display: flex;
+            flex-direction: row;
+            width:225px;
+            height: 40px;     
+            border-radius: .25rem; 
+            /* margin-bottom: 10px; */
+        }
+
+        #btnsearch{
+            height: 40px;   
+            padding:10px;    
+            background-color: rgb(88, 138, 231);
+            border:none;
+            color:white;
+            border-top-right-radius: .25rem; 
+            border-bottom-right-radius:.25rem;  
             cursor: pointer;
         }
-        .navmain_navbar div a:hover{
-            background-color: #848a99f6;
-            color:white;
-            background-color:#287da1f4;        
-            padding:7px 10px 7px 10px; 
-            opacity: 0.7;
-            text-decoration: none;
+        .groupsearch{
+             display: flex;
+             flex-wrap: wrap;
+            /*flex-direction: row; */
+            align-items:center;
+            padding-bottom: 0;
         }
-       */
+        @media (max-width:600px){
+            .groupsearch{        
+            flex-direction: column;        
+            padding-bottom: 0;
+            align-items: flex-start;
+            gap:1em;
+        }
+        }
+        .groupsearch label{
+            margin-bottom: 0;
+        }
+      
     </style>
 </head>
 <body>
@@ -229,9 +248,11 @@
     <div class="navmain_navbar"></div>
     <main>
 <div class="dsearch">
-    <label>Enter City</label>
+    <div class="groupsearch">
+    <label>Enter City: </label>
+    <div class="input_group">
     <input id="city" type="text">
-     <button id="btnsearch" class="classBtns">Serch</button>     
+     <button id="btnsearch"><i class="fas fa-search"></i></button> </div></div>    
      <ul class="allTown">
      </ul>
 
