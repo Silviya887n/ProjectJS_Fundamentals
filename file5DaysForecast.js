@@ -100,10 +100,10 @@ window.onload= async function(){
             eltd2.appendChild(image1);
 
             const eltd3= document.createElement('td');
-            eltd3.textContent=el3.day.maxtemp_c;
+            eltd3.textContent=el3.day.maxtemp_c+' °C';
 
             const eltd4= document.createElement('td');
-            eltd4.textContent=el3.day.mintemp_c;
+            eltd4.textContent=el3.day.mintemp_c+' °C';
             const eltd5= document.createElement('td');
             eltd5.textContent=el3.day.maxwind_mph;
             const eltd6= document.createElement('td');
