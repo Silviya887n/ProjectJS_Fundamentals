@@ -152,7 +152,7 @@ elcurrentw.appendChild(elcurrentcast);
    //  record.localtime,DateTimeFormatter.ofPattern( "dd/MM/uuuu" ) )
 
 const elp1=document.createElement('p');
-elp1.textContent='Temperature: '+record.temp_c+" °C";
+elp1.textContent='Temperature: '+Math.round(Number(record.temp_c))+" °C";
 const elp2=document.createElement('p');
 elp2.textContent='Humidity: '+record.humidity+'%';
 const elp3=document.createElement('p');
@@ -160,7 +160,7 @@ const wind=Math.round((Number(record.wind_mph)*0.44704));
 elp3.textContent='Wind Speed: '+wind+'m/s';
 
 const elp4=document.createElement('p');
-elp4.textContent='UV index:'+record.uv;
+elp4.textContent='UV index:'+Math.round(Number(record.uv));
 
 
 eldiv1.appendChild(elp1);
@@ -257,10 +257,10 @@ const elp52=document.createElement('div');
 elp52.classList.add('styletemp');
 
 const elmaxspan=document.createElement('span');
-elmaxspan.textContent=rec.day.maxtemp_c+" °C";
+elmaxspan.textContent=Math.round(Number(rec.day.maxtemp_c))+" °C";
 
 const elminspan= document.createElement('span');
-elminspan.textContent=rec.day.mintemp_c +" °C";
+elminspan.textContent=Math.round(Number(rec.day.mintemp_c)) +" °C";
 elp52.appendChild(elminspan);
 elp52.appendChild(elmaxspan);
 

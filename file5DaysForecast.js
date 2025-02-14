@@ -100,13 +100,13 @@ window.onload= async function(){
             eltd2.appendChild(image1);
 
             const eltd3= document.createElement('td');
-            eltd3.textContent=el3.day.maxtemp_c+' °C';
+            eltd3.textContent=Math.round(Number(el3.day.maxtemp_c))+' °C';
 
             const eltd4= document.createElement('td');
-            eltd4.textContent=el3.day.mintemp_c+' °C';
+            eltd4.textContent=Math.round(Number(el3.day.mintemp_c))+' °C';
             const eltd5= document.createElement('td');
 
-            const wind=Math.floor((Number(el3.day.maxwind_mph)*0.44704));
+            const wind=Math.round((Number(el3.day.maxwind_mph)*0.44704));
             eltd5.textContent=wind+' m/s';
             const eltd6= document.createElement('td');
             eltd6.textContent=el3.day.totalprecip_mm;

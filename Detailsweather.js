@@ -99,13 +99,13 @@ window.onload= async function(){
 
 
         const elth1= document.createElement('th');
-        elth1.textContent='Max temp.: '+ dcurr.day.maxtemp_c+ ' °C';  /*  avgtemp_c  maxwind_kph*/
+        elth1.textContent='Max temp.: '+ Math.round(Number(dcurr.day.maxtemp_c))+ ' °C';  /*  avgtemp_c  maxwind_kph*/
 
         const elth2= document.createElement('th');
-        elth2.textContent='Min temp.: '+ dcurr.day.mintemp_c+ ' °C';
+        elth2.textContent='Min temp.: '+ Math.round(Number(dcurr.day.mintemp_c))+ ' °C';
 
         const elavg= document.createElement('th');
-        elavg.textContent='Avg temp.: '+ dcurr.day.avgtemp_c+ ' °C';
+        elavg.textContent='Avg temp.: '+ Math.round(Number(dcurr.day.avgtemp_c))+ ' °C';
 
         const elmaxwind= document.createElement('th');
         const wind=Math.round(Number(dcurr.day.maxwind_kph)*0.44704)
@@ -186,14 +186,14 @@ window.onload= async function(){
           
             const eltd2= document.createElement('td');
             const eldivtd2=document.createElement('div');
-            eldivtd2.textContent=elhour.temp_c+' °C';
+            eldivtd2.textContent=Math.round(Number(elhour.temp_c))+' °C';
             eltd2.appendChild(eldivtd2);
 
             
 
             const eltd3= document.createElement('td');
             const eldivtd3=document.createElement('div');
-            eldivtd3.textContent='Feels like: '+elhour.feelslike_c+' °C';
+            eldivtd3.textContent='Feels like: '+Math.round(Number(elhour.feelslike_c))+' °C';
             eltd3.appendChild(eldivtd3);
             //wind_mph   wind_dir gust_mph precip_mm   clound humidity pressure_mb
 
