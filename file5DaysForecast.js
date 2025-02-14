@@ -105,12 +105,14 @@ window.onload= async function(){
             const eltd4= document.createElement('td');
             eltd4.textContent=el3.day.mintemp_c+' °C';
             const eltd5= document.createElement('td');
-            eltd5.textContent=el3.day.maxwind_mph;
+
+            const wind=Math.round((Number(el3.day.maxwind_mph)*0.44704));
+            eltd5.textContent=wind+' m/s';
             const eltd6= document.createElement('td');
             eltd6.textContent=el3.day.totalprecip_mm;
 
             const eltd7= document.createElement('td');
-            eltd7.textContent='';
+            eltd7.textContent=el3.day.avghumidity+'%';
             const eltd8= document.createElement('td');
             eltd8.textContent=el3.astro.sunrise;
 

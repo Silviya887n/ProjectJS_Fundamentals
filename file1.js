@@ -156,7 +156,8 @@ elp1.textContent='Temperature: '+record.temp_c+" °C";
 const elp2=document.createElement('p');
 elp2.textContent='Humidity: '+record.humidity+'%';
 const elp3=document.createElement('p');
-elp3.textContent='Wind Speed: '+record.wind_mph+'MPH';
+const wind=Math.round((Number(record.wind_mph)*0.44704));
+elp3.textContent='Wind Speed: '+wind+'m/s';
 
 const elp4=document.createElement('p');
 elp4.textContent='UV index:'+record.uv;

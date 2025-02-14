@@ -108,7 +108,8 @@ window.onload= async function(){
         elavg.textContent='Avg temp.: '+ dcurr.day.avgtemp_c+ ' °C';
 
         const elmaxwind= document.createElement('th');
-        elmaxwind.textContent='Max wind: '+ dcurr.day.maxwind_kph;
+        const wind=Math.round(Number(dcurr.day.maxwind_kph)*0.44704)
+        elmaxwind.textContent='Max wind: '+ wind+' m/s';
     
         eltr.appendChild(elthsunr);
         // eltr.appendChild(elthsuns);
@@ -198,7 +199,8 @@ window.onload= async function(){
 
             const eltd4= document.createElement('td');
             const eldivtd4=document.createElement('div');
-            eldivtd4.textContent=elhour.wind_mph+ ' kmph';
+            const wind=Math.round((Number(elhour.wind_mph)*0.44704)); 
+            eldivtd4.textContent=wind+ ' m/s';
             eltd4.appendChild(eldivtd4);
 
 
@@ -226,7 +228,7 @@ window.onload= async function(){
 
             const eltd9= document.createElement('td');
             const eldivtd9=document.createElement('div');
-            eldivtd9.textContent='Humidity: '+elhour.humidity;
+            eldivtd9.textContent='Humidity: '+elhour.humidity+'%';
             eltd9.appendChild(eldivtd9);
 
             const eltd10= document.createElement('td');
