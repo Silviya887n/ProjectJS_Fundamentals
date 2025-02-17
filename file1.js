@@ -34,7 +34,7 @@ const BtnClear=document.getElementById('btnclear');
 const BtnDetails=document.getElementById('btndetails');
 const eldivdsearch=document.querySelector('.dsearch');
 
-const errp=document.querySelector('.dsearch p');
+const errp=document.querySelector('.dsearch p');/*1 */
 if(errp != null){
   errp.remove();
 }
