@@ -32,6 +32,12 @@ divfivedays.innerHTML='';
 elcurrentcast.innerHTML='';
 const BtnClear=document.getElementById('btnclear');
 const BtnDetails=document.getElementById('btndetails');
+const eldivdsearch=document.querySelector('.dsearch');
+
+const errp=document.querySelector('.dsearch p');
+if(errp != null){
+   errp.innerHTML='';
+}
 
 try{
  if(!response.ok){  
@@ -78,7 +84,7 @@ if(!isfalse){
 
 
 const eldivBtns=document.querySelector('.ContainerBtns');
-const eldivdsearch=document.querySelector('.dsearch');
+
 
 if(eldivBtns != null){
 
@@ -308,7 +314,8 @@ catch(e){
    const elp=document.createElement('p');
    elp.textContent=e.message;
    elp.style.color='red';
-   elcurrentcast.appendChild(elp);
+  // const eldivdsearch1=document.querySelector('.dsearch');
+   eldivdsearch.appendChild(elp);
   
    if(BtnClear != null && BtnDetails !=null){
       BtnClear.setAttribute('disabled', 'disabled');
