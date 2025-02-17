@@ -23,7 +23,26 @@ const LoadDataTown = async() =>{
 const elementcity=document.getElementById('city');
 const baseurl=`https://api.weatherapi.com/v1/current.json?key=ac561e4d9eef410c9a1122207250402&q=${elementcity.value}&aqi=no`;
 const response=await fetch(baseurl);
+const ElMenu1=document.querySelector('.navmain_navbar');
+const elcurrentcast=document.getElementById('currentcast');
+const divfivedays=document.querySelector('.fivedays');
 
+ElMenu1.innerHTML='';
+divfivedays.innerHTML='';
+elcurrentcast.innerHTML='';
+const BtnClear=document.getElementById('btnclear');
+const BtnDetails=document.getElementById('btndetails');
+
+try{
+ if(!response.ok){  
+   throw new Error(`There is no information for the current city! status:${response.status}`);
+ }
+
+ if(BtnClear!= null && BtnDetails != null){
+   BtnClear.removeAttribute('disabled');
+   BtnDetails.removeAttribute('disabled');
+ }
+ 
 const data= await response.json();
 console.log(Object.values(data));
 
@@ -57,8 +76,9 @@ if(!isfalse){
 
 
 
-const eldivdsearch=document.querySelector('.dsearch');
+
 const eldivBtns=document.querySelector('.ContainerBtns');
+const eldivdsearch=document.querySelector('.dsearch');
 
 if(eldivBtns != null){
 
@@ -102,6 +122,7 @@ elcurrentw.innerHTML='';
 
 
 let countr=0;
+
 for(const record of Object.values(data)){
    if(countr==0){
 
@@ -190,6 +211,10 @@ divfivedays.appendChild(elh4);
 const baseurl1=`https://api.weatherapi.com/v1/forecast.json?key=ac561e4d9eef410c9a1122207250402&q=${elementcity.value}&days=5&aqi=no&alerts=no`;
 const response1=await fetch(baseurl1);
 
+if(!response1.ok){  
+   throw new Error(`There is no information for the current city! status:${response1.status}`);
+ }
+
 const data1= await response1.json();
 const eldivforecast= document.createElement('div');
 eldivforecast.classList.add('class5Days');
@@ -197,7 +222,7 @@ eldivforecast.classList.add('class5Days');
 let countjson=0;
 divfivedays.innerHTML='';
 eldivforecast.innerHTML='';
-const ElMenu1=document.querySelector('.navmain_navbar');
+
 ElMenu1.style.visibility='visible';
 ElMenu1.innerHTML='';
 
@@ -278,8 +303,20 @@ eldivforecast.appendChild(elday1);
 }
 
 divfivedays.appendChild(eldivforecast);
+}
+catch(e){
+   const elp=document.createElement('p');
+   elp.textContent=e.message;
+   elp.style.color='red';
+   elcurrentcast.appendChild(elp);
+  
+   if(BtnClear != null && BtnDetails !=null){
+      BtnClear.setAttribute('disabled', 'disabled');
+      BtnDetails.setAttribute('disabled', 'disabled');
+   }
+   console.log(e.message)
+}
 
-eldivforecast
 };
 
 
