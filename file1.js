@@ -36,7 +36,7 @@ const eldivdsearch=document.querySelector('.dsearch');
 
 const errp=document.querySelector('.dsearch p');
 if(errp != null){
-   errp.innerHTML='';
+  errp.remove();
 }
 
 try{
